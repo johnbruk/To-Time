@@ -1,31 +1,27 @@
-# TOTIME Web App / PWA v0.6
+# TOTIME Web App / PWA v0.7 — Database Edition
 
-Versione con tema scuro / colori invertiti e refresh estetico.
+Questa versione collega TOTIME a Supabase/PostgreSQL.
 
-## Novità principali v0.6
+## Novità principali
 
-- Tema dark navy con accenti blu TOTIME.
-- Design leggermente rivisto in stile più premium/fintech.
-- Font impostato su stack Apple: SF Pro / San Francisco su dispositivi Apple, con fallback su Segoe UI.
-- Uso controllato di font serif di sistema stile New York per il payoff.
-- Logo TOTIME dark nella testata.
-- Cache/service worker aggiornati a `totime-v06`.
+- Login utente con Supabase Auth.
+- Clienti, progetti, attività, timesheet, compensi mensili e stati fattura salvati su Supabase.
+- localStorage non è più lo storage principale dei dati.
+- Import CSV direttamente nel database.
+- Fatturazione organizzata come fattura mensile per cliente, con righe progetto/cliente finale copiabili singolarmente in Fiscozen.
+- Tema dark / colori invertiti e font Apple system stack.
 
-## Confermate dalla v0.5.1
+## Configurazione Supabase
 
-- Timesheet operativo senza importi economici.
-- Importi visibili in Home, Riepilogo e Fatturazione.
-- Righe di riepilogo in formato orizzontale: `9,0 h · 1,1 gg/u · 618,75 €`.
-- Riepilogo mensile aggregato sempre per Cliente + Progetto/Cliente finale.
-- Modifica, eliminazione e duplicazione dei consuntivi da Timesheet.
-- Dropdown Progetto/Cliente finale filtrato in base al Cliente selezionato.
+La configurazione è già impostata nel file `app.js`:
 
-## Avvio
+- `SUPABASE_URL`
+- `SUPABASE_PUBLISHABLE_KEY`
 
-Apri `index.html` con Chrome, Edge o Safari.
+Non inserire mai secret key o service role key nel frontend.
 
-Se il browser mostra una vecchia versione, esegui un refresh forzato o cancella la cache del sito.
+## Deploy
 
-## Dati
+Carica il contenuto della cartella su GitHub e pubblica con Netlify/Vercel.
 
-I dati restano salvati nel browser tramite `localStorage`. Usa Export JSON per fare backup.
+Se hai già installato una versione precedente come PWA, dopo il deploy fai refresh forzato o rimuovi/reinstalla l'app dalla Home per evitare cache vecchie.
