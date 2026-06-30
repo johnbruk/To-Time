@@ -12,5 +12,10 @@ Release di navigazione assistita e menu rapido senza modifiche al data model.
 - Smoke test avvio modulo: `node tests/module-startup-smoke.mjs`.
 - Regression test navigazione: `node tests/navigation-regression.mjs`.
 
+## Fase 0 baseline
+- Fotografia funzionale: `docs/PHASE_0_BASELINE.md`
+- Checklist manuale Fase 0: `docs/PHASE_0_MANUAL_REGRESSION.md`
+- Test funzioni pure: `node tests/phase0-pure-functions.mjs`
+
 ## Nota deploy
 Caricare su GitHub i file estratti, non lo ZIP. Se la PWA mostra una vecchia versione, aprire il link con `?v=113` o reinstallare la PWA dalla Home.
