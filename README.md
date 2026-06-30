@@ -1,14 +1,15 @@
-# TOTIME Web App / PWA v1.0
+# TOTIME Web App / PWA v1.1.1
 
-Release con dashboard annuale, rivalsa INPS 4% e sezione Fiscalità per regime forfettario.
+Release rigenerata dopo migrazione SQL v1.1 dei parametri di proiezione annuale.
 
-## Novità principali
-- Riepilogo annuale: consuntivato, fatturato, incassato e da incassare.
-- Home con grafico anno in corso.
-- Riepilogo mensile con grafico progressivo del mese.
-- Fatturazione con rivalsa INPS configurabile e marca da bollo.
-- Sezione Fiscalità con ATECO, coefficiente di redditività, aliquota sostitutiva, stima imposta e netto stimato.
-- Tutte le impostazioni fiscali sono configurabili da app.
+## Novità rispetto alla v1.1
+- Proiezione anno collegata ai nuovi campi configurabili in `tax_settings`.
+- Data avvio attività letta da database (`activity_start_date`).
+- Mesi esclusi dalla proiezione configurabili.
+- Inclusione/esclusione del mese corrente configurabile.
+- Fattori scenario prudente/ottimistico configurabili.
+- Soglie rischio configurabili.
+- Cache/service worker aggiornato a `totime-v111`.
 
-## Prima di pubblicare
-Assicurarsi di aver già eseguito su Supabase le migration v1.0 e ATECO configurabile.
+## Nota deploy
+Caricare su GitHub i file estratti, non lo ZIP. Se la PWA mostra una vecchia versione, aprire il link con `?v=111` o reinstallare la PWA dalla Home.
