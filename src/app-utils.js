@@ -1,4 +1,4 @@
-export const APP_VERSION='v1.1.2';
+export const APP_VERSION='v1.1.3';
 export const SUPABASE_URL='https://mdnttasmkgnaxzkxqaks.supabase.co';
 export const SUPABASE_PUBLISHABLE_KEY='sb_publishable_Ftv4e-vlXgWEs2aV7BFSTw_CcX1DVT9';
 

@@ -23,6 +23,7 @@ globalThis.document = {
     assert.equal(id, 'app');
     return appNode;
   },
+  addEventListener() {},
   createElement(tag) {
     return {
       tagName: String(tag).toUpperCase(),
@@ -91,6 +92,10 @@ assert.equal(document.documentElement.attributes['data-theme'], 'dark');
 assert.equal(localStorage.getItem('totime-theme'), 'dark');
 assert.equal(typeof window.signIn, 'function');
 assert.equal(typeof window.go, 'function');
+assert.equal(typeof window.back, 'function');
+assert.equal(typeof window.toggleMainMenu, 'function');
+assert.equal(typeof window.menuDropdown, 'function');
+assert.equal(typeof window.guardUnsavedChanges, 'function');
 assert.equal(typeof window.importCsv, 'function');
 assert.equal(typeof window.billingCalc, 'function');
 assert.equal(typeof window.projectionCalc, 'function');
