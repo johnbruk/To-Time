@@ -88,8 +88,8 @@ await import('../app.js');
 await new Promise(resolve => setTimeout(resolve, 0));
 
 assert.match(appNode.innerHTML, /Accesso/);
-assert.equal(document.documentElement.attributes['data-theme'], 'dark');
-assert.equal(localStorage.getItem('totime-theme'), 'dark');
+assert.equal(document.documentElement.attributes['data-theme'], 'light');
+assert.equal(localStorage.getItem('totime-theme'), 'light');
 assert.equal(typeof window.signIn, 'function');
 assert.equal(typeof window.go, 'function');
 assert.equal(typeof window.back, 'function');
