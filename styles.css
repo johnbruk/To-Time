@@ -21,3 +21,8 @@ button,input,select,textarea{font-family:var(--font-body)} button{cursor:pointer
 
 /* v1.1.3 navigation refinements */
 .headerMenuWrap{position:relative;display:grid;place-items:center}.topMenu{position:fixed;inset:0;z-index:50;background:var(--surface);padding:28px 24px;display:flex;flex-direction:column;gap:6px;overflow-y:auto}.topMenuClose{position:absolute;top:20px;right:20px;width:42px;height:42px;border-radius:14px;border:1px solid var(--line);background:var(--surface2);color:var(--text);font-size:18px;display:grid;place-items:center}.topMenuLogo{height:56px;width:auto;display:block;margin:4px auto 28px}.topMenu button{border:0;border-radius:16px;background:transparent;color:var(--text);display:grid;grid-template-columns:36px 1fr;align-items:center;gap:14px;padding:16px;text-align:left;font-size:18px}.topMenu button span{color:var(--primary2);font-size:22px;text-align:center}.topMenu button b{font-weight:700}.topMenu button.active,.topMenu button:hover{background:rgba(147,163,149,.14)}.backArrow{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:12px;width:36px;height:36px;font-size:21px;line-height:1;display:grid;place-items:center;margin:0 0 10px;box-shadow:none}.backArrow:hover{background:var(--surface)}
+
+.cardLink{cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.cardLink:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.10)}
+.cardLink:active{transform:translateY(0)}
+.cardLinkArrow{color:var(--green);font-weight:800;margin-left:2px}
