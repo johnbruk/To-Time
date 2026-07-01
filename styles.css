@@ -8,7 +8,7 @@
 }
 :root[data-theme="light"]{
   --bg:#F6F7F8; --bg2:#F6F7F8; --surface:#FFFFFF; --surface2:#F7F8FA; --card:#FFFFFF; --card2:#F5F6F8;
-  --text:#16191D; --muted:#71767D; --soft:#40454B; --line:rgba(20,24,30,.09); --shadow:0 10px 24px rgba(20,24,30,.06);
+  --text:#151A1F; --muted:#71767D; --soft:#40454B; --line:rgba(21,26,31,.09); --shadow:0 10px 24px rgba(21,26,31,.06);
 }
 *{box-sizing:border-box} html{background:var(--bg)}
 body{margin:0;min-height:100vh;color:var(--text);font-family:var(--font-sf);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--bg);}
