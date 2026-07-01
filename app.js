@@ -131,7 +131,12 @@ async function init(){
   const res=await sb.auth.getSession(); session=res.data.session;
   if(session) await fetchAll();
   state.loading=false; render();
-  sb.auth.onAuthStateChange(async(_event,newSession)=>{session=newSession; if(session){await fetchAll();state.view='home'}else{data={clients:[],projects:[],activities:[],entries:[],monthly:[],billingHeaders:[],profiles:[],expenseCategories:[],travelExpenses:[],manualEntries:[],invoiceTemplates:[],appSettings:[],taxSettings:[],taxPayments:[]};state.view='login'} render();});
+  sb.auth.onAuthStateChange(async(_event,newSession)=>{
+    const wasLoggedIn=!!session;
+    session=newSession;
+    if(!session){data={clients:[],projects:[],activities:[],entries:[],monthly:[],billingHeaders:[],profiles:[],expenseCategories:[],travelExpenses:[],manualEntries:[],invoiceTemplates:[],appSettings:[],taxSettings:[],taxPayments:[]};state.view='login';render();return}
+    if(_event==='SIGNED_IN'&&!wasLoggedIn){await fetchAll();state.view='home';render()}
+  });
 }
 async function fetchAll(){
   state.loading=true; render();
