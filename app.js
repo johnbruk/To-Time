@@ -187,6 +187,9 @@ async function signUpDetailed(ev){
   ev.preventDefault(); const f=Object.fromEntries(new FormData(ev.target)); state.message='Creazione account in corso...'; render();
   const {data:signData,error}=await sb.auth.signUp({email:f.email,password:f.password,options:{data:{first_name:f.first_name,last_name:f.last_name,company_name:f.company_name,vat_number:f.vat_number,email:f.email}}});
   if(error)return setMsg(error.message,7000);
+  if(signData?.user && Array.isArray(signData.user.identities) && signData.user.identities.length===0){
+    return setMsg('Questo indirizzo email risulta gia\' registrato. Prova ad accedere oppure usa "Password dimenticata?".',9000);
+  }
   const userId=signData?.user?.id;
   if(userId){
     const {error:profileError}=await sb.from('user_profiles').insert({user_id:userId,first_name:f.first_name,last_name:f.last_name,company_name:f.company_name,vat_number:f.vat_number,email:f.email});
